@@ -1,104 +1,202 @@
 /* ============================================================
    SUZA Web Technologies — Practical Test
-   Student      : [WRITE YOUR FULL NAME]
-   Reg No.      : [WRITE YOUR REG NUMBER]
-   Question     : Q[XXX] — [PASTE YOUR QUESTION TITLE]
+   Student      : YASINI HAMISI SAIDI
+   Reg No.      : 24BIT095
+   Question     : Q84 — RESTAURANT MENU
    ============================================================ */
 
-/* ---------- Starter reset (you may keep or modify) ---------- */
+/* ---------- Reset ---------- */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* ---------- Body ---------- */
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background: #f5f6fa;
   color: #2d3436;
-  background: #fafafa;
 }
 
+/* ---------- Images ---------- */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* ---------- Links ---------- */
 a {
-  color: #0a3d62;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
-/* ---------- Header / Footer (do not over-edit) ---------- */
-.page-header,
-.page-footer {
+/* ---------- Header ---------- */
+.page-header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   background: #ffffff;
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #ddd;
 }
 
 .page-header .logo {
-  flex-shrink: 0;
+  border-radius: 50%;
 }
 
 .page-header h1 {
   margin: 0;
-  font-size: 1.4rem;
+  color: #e17055;
+  font-size: 1.7rem;
 }
 
-.page-header .subtitle {
+.subtitle {
   margin: 0;
   color: #636e72;
-  font-size: 0.9rem;
 }
 
-.page-footer {
-  border-top: 1px solid #e2e2e2;
-  border-bottom: none;
-  margin-top: 3rem;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 0.9rem;
-}
-
-.page-footer p {
-  margin: 0.25rem 0;
-}
-
+/* ---------- Main ---------- */
 main {
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+  margin: auto;
+  padding: 2rem;
 }
 
-/* ============================================================
-   YOUR SOLUTION CSS GOES BELOW
-   Delete the .solution placeholder rules once you start.
-   ============================================================ */
+/* ---------- Hero Section ---------- */
+.hero img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
-.solution {
-  background: #fff;
-  border: 1px dashed #b2bec3;
-  padding: 2rem;
-  border-radius: 10px;
+/* ---------- Menu Container ---------- */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* ---------- Menu Category ---------- */
+.menu-category {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-category:hover {
+  transform: translateY(-5px);
+}
+
+.menu-category h2 {
+  margin-top: 0;
+  color: #d35400;
+  border-bottom: 2px solid #f39c12;
+  padding-bottom: 0.5rem;
+}
+
+/* ---------- Menu Items ---------- */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item span {
+  font-size: 1rem;
+}
+
+/* ---------- Gallery ---------- */
+.gallery {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 300px;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Links Section ---------- */
+.links-section {
+  margin-top: 3rem;
   text-align: center;
 }
 
-.solution img {
-  margin: 1rem auto;
-  border-radius: 8px;
+.links-section h2 {
+  color: #d35400;
+  margin-bottom: 1rem;
 }
 
-/* ---------- Example media query (mobile) ---------- */
+.links-section a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #e67e22;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.links-section a:hover {
+  background: #d35400;
+  transform: scale(1.05);
+}
+
+/* ---------- Footer ---------- */
+.page-footer {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+.page-footer p {
+  margin: 0.4rem 0;
+}
+
+/* ---------- Mobile Responsive ---------- */
 @media (max-width: 600px) {
+
   .page-header {
     flex-direction: column;
     text-align: center;
   }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 100%;
+  }
+
   main {
     padding: 1rem;
   }
